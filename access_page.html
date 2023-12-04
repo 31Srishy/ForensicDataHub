@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Case Details</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles4.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="center">
+      <h1>Case Details</h1>
+      <form id="caseForm" onsubmit="return submitForm()">
+        <label for="caseId">Enter Case ID:</label>
+        <input type="text" id="caseId" name="caseId" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <!-- Display Case Information (Initially Hidden) -->
+      <div class="case-info" id="caseDetailsSection" style="display: none;">
+        <!-- ... (your existing case details content) -->
+        <div class="forensic-info">
+          <h2>Forensic Info</h2>
+          <div class="evidence-processing">
+            <h3>Evidence Processing</h3>
+            <p>Weapon ID: <span id="weaponId"></span></p>
+            <p>Weapon Name: <span id="weaponName"></span></p>
+            <p>Processing Method: <span id="processingMethod"></span></p>
+          </div>
+          <div class="inferences">
+            <h3>Inferences</h3>
+            <p>Evidence Type: <span id="evidenceType"></span></p>
+            <p>Address Found: <span id="addressFound"></span></p>
+            <p>Blood Group: <span id="bloodGroup"></span></p>
+            <p>DNA Match: <span id="dnaMatch"></span></p>
+          </div>
+        </div>
+
+        <div class="crime-info">
+          <h2>Crime Info</h2>
+          <div class="victim-info">
+            <h3>Victim Info</h3>
+            <p>Victim ID: <span id="victimId"></span></p>
+            <p>Name: <span id="victimName"></span></p>
+            <p>Address: <span id="victimAddress"></span></p>
+            <p>City: <span id="victimCity"></span></p>
+            <p>Sex: <span id="victimSex"></span></p>
+            <p>Date of Birth: <span id="victimDOB"></span></p>
+            <p>Family Info: <span id="familyInfo"></span></p>
+          </div>
+          <div class="suspect-info">
+            <h3>Suspect Info</h3>
+            <p>Suspect ID: <span id="suspectId"></span></p>
+            <p>Name: <span id="suspectName"></span></p>
+            <p>Address: <span id="suspectAddress"></span></p>
+          </div>
+          <div class="evidences-collected">
+            <h3>Evidences Collected</h3>
+            <p>Weapon ID: <span id="collectedWeaponId"></span></p>
+            <p>Siezing Officer: <span id="siezingOfficer"></span></p>
+          </div>
+          <div class="lab-details">
+            <h3>Lab Details</h3>
+            <p>Lab ID: <span id="labId"></span></p>
+            <p>Specialization: <span id="labSpecialization"></span></p>
+            <p>Address: <span id="labAddress"></span></p>
+          </div>
+          <div class="tech-details">
+            <h3>Tech Details</h3>
+            <p>Tech ID: <span id="techId"></span></p>
+            <p>Name: <span id="techName"></span></p>
+            <p>Designation: <span id="techDesignation"></span></p>
+            <p>Department: <span id="techDepartment"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="process_case.js"></script>
+</body>
+</html>
